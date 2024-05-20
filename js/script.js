@@ -1,8 +1,8 @@
-const btn = document.querySelector("button");
-const gridEl = document.getElementById("grid");
-const bombsN = 16;
-const score = document.querySelector("h2");
 const esito = document.querySelector("h2.esito");
+const gridEl = document.getElementById("grid");
+const btn = document.querySelector("button");
+const score = document.querySelector("h2");
+const bombsN = 16;
 
 // Al click del bottone Play
 btn.addEventListener("click", function () {
@@ -74,6 +74,13 @@ function gridGenerator(points, bombsN, score, esito) {
                     //Ferma il gioco e mostra esito di sconfitta
                     stop(score, points);
                     esito.innerHTML = "Hai perso, ritenta sarai più fortunato";
+
+                    //Prendiamo la lista di tutte le celle
+                    let allCell = document.getElementsByClassName("cell");
+                    //Per ogni cella contenuta nell'array delle bombe aggiungi la classe attiva per mostare tutte le bombe
+                    for (let i = 0; i < arrayBombs.length; i++) {
+                        allCell[arrayBombs[i]].classList.add("active")
+                    }
                 }
 
                 //Aggiungi un punto
