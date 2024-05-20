@@ -18,4 +18,11 @@ Le validazioni e i controlli possiamo farli anche in un secondo momento.
 
 
 
+-Vecchia repo:
+Creo un bottone ed una sezione dove inserire le caselle nel dom. Do le grandezze alla sezione. Do le grandezze alle celle che dovrò inserire per creare la griglia Creo una funzione per il click sul bottone per far generare le celle nella sezione tramite un ciclo Pulisco in caso ci fosse una griglia già presente. Creo un ciclo for per creare ed inserire le celle nella sezione. Dentro il ciclo for includo anche l'indice della cella ed inoltre una funzione per l'aggiunta di una classe quando la determinata cella viene cliccata Creo una classe nel css per come deve essere visualizzata la cella quando cliccata. Quando la cella viene cliccata faccio un console.log del suo index.
 
+-Nuova repo:
+Creo un array che dovrà contenere i numeri dove verranno posizionate le bombe.
+Creo un ciclo while affinchè i numeri creati siano unici e non ripetuti.
+Aggiungo un Let per i punti che partono da 0, aumenta di 1 per ogni click su una casella giusta.
+Se viene cliccata una casella con una bomba il gioco si ferma e viene visualizzato il punteggio
