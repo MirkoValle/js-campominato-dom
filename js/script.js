@@ -2,9 +2,19 @@ const btn = document.querySelector("button");
 const gridEl = document.getElementById("grid");
 
 btn.addEventListener("click", function () {
+    gridEl.innerHTML = ""
+
+    gridGenerator();
+
+
+});
+
+
+function gridGenerator() {
+
+    let cellN;
     let modeEl = document.getElementById("mode");
     let mode = modeEl.value;
-    let cellN;
 
     if (mode === "easy") {
         cellN = 49;
@@ -14,7 +24,6 @@ btn.addEventListener("click", function () {
         cellN = 100;
     }
 
-    gridEl.innerHTML = ""
     for (let index = 0; index < cellN; index++) {
         const cellEl = document.createElement("article");
         cellEl.classList.add("cell", mode);
@@ -26,4 +35,4 @@ btn.addEventListener("click", function () {
 
         gridEl.appendChild(cellEl);
     }
-})
+}
