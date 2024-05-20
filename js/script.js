@@ -1,5 +1,6 @@
 const btn = document.querySelector("button");
 const gridEl = document.getElementById("grid");
+const bombsN = 16;
 
 btn.addEventListener("click", function () {
     gridEl.innerHTML = ""
@@ -24,8 +25,8 @@ function gridGenerator() {
         cellN = 100;
     }
 
-    let bombs = bombsGenerator(cellN)
-
+    let arrayBombs = bombsGenerator(cellN, bombsN);
+    console.log(arrayBombs)
 
     for (let index = 0; index < cellN; index++) {
         const cellEl = document.createElement("article");
@@ -41,11 +42,19 @@ function gridGenerator() {
 }
 
 
-function bombsGenerator(cellN) {
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * ((max + 1) - min)) + min;
+}
+
+function bombsGenerator(cellN, bombsN) {
     let array = [];
-    for (let index = 0; index < 16; index++) {
 
-
+    for (let index = 0; index < bombsN; index++) {
+        let bomb = getRandomNumber(1, cellN);
+        while (array.includes(bomb)) {
+            bomb = getRandomNumber(1, cellN);
+        }
+        array.push(bomb);
     }
-
+    return array;
 }
