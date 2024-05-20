@@ -27,12 +27,12 @@ header img {
 }
 
 main {
-    background-color: rgb(226, 225, 225);
+    background-color: rgb(121, 121, 121);
     padding: 2rem;
 }
 
 main h2.esito {
-    color: red;
+    color: rgb(165, 3, 3);
 }
 
 main h2 {
@@ -48,14 +48,20 @@ main section#grid {
     flex-wrap: wrap;
 }
 
+main section#grid.active {
+    border: 4mm outset rgba(0, 0, 0, 0.6);
+}
+
 main section#grid article.cell {
-    border: 2px solid black;
+    border: 4mm outset rgba(255, 255, 255, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
     color: black;
     font-size: 2rem;
     cursor: pointer;
+    background-color: rgb(204, 203, 203);
+
 }
 
 main section#grid article.cell.hard {
@@ -74,9 +80,10 @@ main section#grid article.cell.easy {
 }
 
 main section#grid article.cell.active {
-    background-color: rgb(255, 155, 118);
+    background-color: rgb(221, 221, 221);
     color: white;
     cursor: default;
+    border: none;
 }
 
 main section#grid article.cell.active.bomb>span {
@@ -89,5 +96,5 @@ main section#grid article.cell.active.bomb>span {
 
 footer p {
     font-size: 1.5rem;
-    padding: 1.4rem 2rem;
+    padding: .4rem 2rem;
 }

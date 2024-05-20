@@ -20,6 +20,8 @@ btn.addEventListener("click", function () {
     //Funzione di generazione griglia
     gridGenerator(points, bombsN, score, esito);
 
+    //Aggiunga la classe active alla griglia
+    gridEl.classList.add("active");
 });
 
 function gridGenerator(points, bombsN, score, esito) {
