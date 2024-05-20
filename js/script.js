@@ -24,6 +24,9 @@ function gridGenerator() {
         cellN = 100;
     }
 
+    let bombs = bombsGenerator(cellN)
+
+
     for (let index = 0; index < cellN; index++) {
         const cellEl = document.createElement("article");
         cellEl.classList.add("cell", mode);
@@ -35,4 +38,14 @@ function gridGenerator() {
 
         gridEl.appendChild(cellEl);
     }
+}
+
+
+function bombsGenerator(cellN) {
+    let array = [];
+    for (let index = 0; index < 16; index++) {
+
+
+    }
+
 }
