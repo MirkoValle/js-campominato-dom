@@ -51,7 +51,7 @@ function gridGenerator(points, bombsN, score, esito) {
             cellEl.classList.add("bomb");
             let bombImg = document.createElement("span");
             cellEl.appendChild(bombImg);
-            cellEl.append(index + 1);
+
         }
 
         //Inserisco le classi generali delle celle in base alla modalità di gioco
