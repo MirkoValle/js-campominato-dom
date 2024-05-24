@@ -51,7 +51,6 @@ function gridGenerator(points, bombsN, score, esito) {
             cellEl.classList.add("bomb");
             let bombImg = document.createElement("span");
             cellEl.appendChild(bombImg);
-
         }
 
         //Inserisco le classi generali delle celle in base alla modalità di gioco
@@ -129,9 +128,9 @@ function bombsGenerator(cellN, bombsN) {
 
     //Crea 16 bombe in una posizione casuale senza ripetere mai lo stesso numero
     for (let index = 0; index < bombsN; index++) {
-        let bomb = getRandomNumber(1, cellN);
+        let bomb = getRandomNumber(0, cellN - 1);
         while (array.includes(bomb)) {
-            bomb = getRandomNumber(1, cellN);
+            bomb = getRandomNumber(0, cellN - 1);
         }
 
         //Inseriscilo nell'array
